@@ -183,16 +183,16 @@ __Board Mounts__
 <img src="images\gps_module.png" height="300">
 <img src="images\servo_pdb.png" height="300">
 
+__Parking Sign__
+
+<img src="images\sign.png" height="300">
 
 ## Gantt Chart --
 
 <img src="images\gantt.png" height="300">
 <hr>
 
-## Acknowledgements --
-Special thanks to Professor Jack Silberman and TAs (Kishore Nukala & Moises Lopez) for all the support!
-
-**Programs Referenced:** --
+**References:** --
 * [Spring 2022 Team 1](https://guitar.ucsd.edu/maeece148/index.php/2022SpringTeam1)
 * [DepthAI](https://github.com/luxonis/depthai-python)
 * [UCSD Robocar Framework](https://gitlab.com/ucsd_robocar2)
