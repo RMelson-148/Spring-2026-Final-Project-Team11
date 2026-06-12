@@ -164,7 +164,7 @@ __Baseplate__
 
 __Rasperry Pi Case/Shell__
 
-<img src="images\rasp_pi.png.PNG" height="300">
+<img src="images\rasp_pi.png" height="300">
 
 __Camera Mount__
 
@@ -174,8 +174,6 @@ __Camera Mount__
 __Circuit Diagram__
 
 <img src="images\circuit.png" height="300">
-
-<hr>
 
 __Board Mounts__
 
