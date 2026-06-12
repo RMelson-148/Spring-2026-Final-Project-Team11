@@ -140,6 +140,7 @@ We used the DepthAI package to implement pedestrian detection within ROS2. We to
 __Parts List__
 
 * Traxxas Chassis with steering servo and sensored brushless DC motor
+* Servo PDB
 * Raspberry Pi
 * WiFi adapter
 * 64 GB Micro SD Card
@@ -154,84 +155,38 @@ __Parts List__
 * Battery voltage checker/alarm
 * DC Barrel Connector
 * XT60, XT30, MR60 connectors
-
-*Additional Parts used for testing/debugging*
-
 * USB-C to USB-A cable as well as USB-C to USB-C
 * Micro USB to USB cable
 
 __Baseplate__
 
-<img src="images\baseplate.PNG" height="300">
-<!--![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/e6602891-79b6-4dc2-9041-1f3944957bf0)-->
+<img src="images\chassis.png" height="300">
 
-__Jetson Nano Case__
+__Rasperry Pi Case/Shell__
 
-<img src="images\jetsonCase.PNG" height="300">
-<!--![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/63896700-373c-46b1-9988-9b9c2bb5c747)
-![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/9ef2de13-563a-4913-a153-63b0cf8d14c7)
-![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/17c07153-c1a1-49b8-80e3-6d8203097c39)-->
-
-Credit: https://www.thingiverse.com/thing:3778338
+<img src="images\rasp_pi.png.PNG" height="300">
 
 __Camera Mount__
 
-<img src="images\cameraMount.PNG" height="300">
-
-Credit: https://www.thingiverse.com/thing:5336496
-<!--![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/5c09cbd4-6bd3-4c49-9e59-29f13cd2f1fd)
-![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/dfee34c8-abdf-4bed-a303-4a3d9dcf1e5c)
-![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/979798ce-7823-4885-bd02-62e6fe5d953e)
-![image](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5/assets/110933991/fd08ccc0-b16f-4b23-b3a5-b96e650e1717)-->
+<img src="images\cam_mount.png" height="300">
+<img src="images\camera.png" height="300">
 
 __Circuit Diagram__
 
-<img src="images\circuitDiagram.PNG" height="300">
+<img src="images\circuit.png" height="300">
 
 <hr>
+
+__Board Mounts__
+
+<img src="images\dcdc_conv.png" height="300">
+<img src="images\gps_module.png" height="300">
+<img src="images\servo_pdb.png" height="300">
+
 
 ## Gantt Chart --
 
-<img src="images\projectGantt.PNG" height="300">
-<hr>
-
-## Course Deliverables --
-Here are our autonomous laps as part of our class deliverables and preparation for the final project:
-
-* Lane detection using OpenCV + ROS2: https://youtu.be/ensYDWS0fc4
-* Inner lane: https://drive.google.com/file/d/1SGNKMuTuL6o_IKrJB7Sfbhk6654geIMa/view?usp=drive_link
-* Outer lane: https://drive.google.com/file/d/1BtGmwQEgpboFYSuyDKBHTyqufXaYvAOl/view?usp=drive_link
-* GPS: https://youtu.be/IlAwR1aKfdU
-
-Here are our presentation slides for the weekly project updates and final presentation:
-[Team 5 Presentation](https://docs.google.com/presentation/d/1sPPWAnGMisoc15QvhqSP7sxDoCSJ5Mn_mOzy9liQnEs/edit?usp=sharing)
-<hr>
-
-## Project Reproduction -- 
-If you are interested in reproducing our project, here are a few steps to get you started with our repo:
-
-<ol>
-  <li>Clone this repository</li>
-  <li>Replace the <i>ucsd_robocar_sensor2_pkg</i> and <i>ucsd_robocar_lane_detection2_pkg</i> in the default <i>ucsd_robocar_hub2</i> directory</li>
-  <li> Calibrate Your Robot
-    <ol>
-      <li>Toggle <i>camera_nav_calibration</i> to 1 and <i>camera_nav</i> to 0 within <i>node_config.yaml</i></li>
-      <li>Run <i>source_ros2</i>, <i>build_ros2</i>, and then <i>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</i> </li>
-      <li>Adjust sliders within GUI to ensure gold mask is clear with <b>NO</b> noise </li>
-      <li>Toggle <i>camera_nav_calibration</i> to 0 and <i>camera_nav</i> to 1 within <i>node_config.yaml</i></li>
-      <li>Update your PID and throttle values in <i>ros_racer_calibration.yaml</i></li>
-    </ol>
-  </li>
-  <li>Run on Track</li>
-    <ol>
-        <li>Run <i>source_ros2</i>, <i>build_ros2</i>, and then <i>ros2 launch ucsd_robocar_nav2_pkg all_nodes.launch.py</i> </li>
-    </ol>
-</ol>
-
-Alternatively you can refer to the `lane_guidance_node.py` and `lane_detection_node.py` programs in `ucsd_robocar_lane_detection2_pkg/ucsd_robocar_lane_detection2_pkg` to adapt our code as needed for your project. We have extensive comments through the code explaining what is happening. Additionally, if you search for <i>(Edit as Wanted)</i> in our code, we have listed the primary areas where one would want to adjust parameters to adapt the lidar usage, pedestrian detection logic, and more. Some consistent, but simple and relevant issues we encountered were ensuring file pathways were correct and making sure that all dependencies are installed.
-
-**Best of luck!**
-
+<img src="images\gantt.png" height="300">
 <hr>
 
 ## Acknowledgements --
