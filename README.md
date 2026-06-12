@@ -191,7 +191,7 @@ __Parking Sign__
 <hr>
 
 **References:** --
-* [Spring 2022 Team 1](https://guitar.ucsd.edu/maeece148/index.php/2022SpringTeam1)
+* [Spring 2023 Team 5](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5) - GitHub Formatting
 * [DepthAI](https://github.com/luxonis/depthai-python)
 * [UCSD Robocar Framework](https://gitlab.com/ucsd_robocar2)
 
