@@ -134,7 +134,7 @@ We used the LD06 Lidar to implement obstacle avoidance within ROS2. The program 
 We used the DepthAI package to implement pedestrian detection within ROS2. We took advantage of the Tiny YOLO neural network setup found within the examples. We filter through the detections to check strictly for a "person" with adjustable confidence levels. We found that a 60% confidence level worked pretty well for our project's use cases. Surprisingly, we found better results with real humans walking in front of the robot (it would detect their feet and be able to classify them as "person" objects). We were also able to successfully scan various printout images of people with high accuracy and success. The programming logic for pedestrian detection is very simple in that if a "person" has been detected in the image passed through by the camera, the VESC throttles are set to 0, stopping the car, until the person has moved out of the field of view.
 <hr>
 
-## Hardware --
+## Hardware 
 
 * __3D Printing:__ All board mounts, Raspberry Pi Mount, Camera Mount and containment.
 * __Laser Cutting:__ Base plate to mount electronics and other components.
@@ -187,19 +187,19 @@ __Parking Sign__
 
 <img src="images\sign.png" height="300">
 
-## Gantt Chart --
+## Gantt Chart 
 
 <img src="images\gantt.png" height="300">
 <hr>
 
-**References:** --
+**References:** 
 * [Spring 2023 Team 5](https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-5) - GitHub Formatting
 * [DepthAI](https://github.com/luxonis/depthai-python)
 * [UCSD Robocar Framework](https://gitlab.com/ucsd_robocar2)
 
 <hr>
 
-## Contacts --
+## Contacts 
 
 * Alan Ye (a8ye@ucsd.edu)- ECE [LinkedIn](https://www.linkedin.com/in/alan-ye-683ab6346/)
 
