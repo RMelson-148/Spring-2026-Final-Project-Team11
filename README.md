@@ -23,10 +23,10 @@ This repository contains all information regarding the DonkeyCar Taxi for team 1
   <ol>
 <li><a href="#team-members">Team Members</a></li>
     <li><a href="#abstract">Abstract</a></li>
-    <li><a href="#what-we-promised">What We Promised</a></li>
+    <li><a href="#Promises">Promises</a></li>
     <li><a href="#accomplishments">Accomplishments</a></li>
     <li><a href="#challenges">Challenges</a></li>
-    <li><a href="#final-project-videos">Final Project Media</a></li>
+    <li><a href="#final-project-media">Final Project Media</a></li>
     <li><a href="#software">Software</a></li>
         <ul>
         <li><a href="#obstacle-avoidance">Obstacle Avoidance</a></li>
@@ -55,7 +55,7 @@ Ryan Melson - MAE [LinkedIn](https://www.linkedin.com/in/ryan-melson-97ab44213/?
 Our goal for the Final Project was to make a DonkeyCar Taxi, that would bring a passenger, in our case a 3D printed duck, to a valid position to then stop for a short time and simulate a deboarding and boarding process. Using an enhance 2D LiDAR system coincided with an OAK-D Lite for visual confirmation and navigation. Valid parking being designated by a specific sign indicating temporary parking only. 
 <hr>
 
-## What We Promised --
+## Promises --
 * Specific Object detection for allowed parking regions
 * Object / Pedestrian detection using the LiDAR module
 * The previous two objectives would also be achieved while line following and within ROS2
