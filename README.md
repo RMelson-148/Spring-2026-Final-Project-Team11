@@ -55,27 +55,29 @@ Ryan Melson - MAE [LinkedIn](https://www.linkedin.com/in/ryan-melson-97ab44213/?
 Our goal for the Final Project was to make a DonkeyCar Taxi, that would bring a passenger, in our case a 3D printed duck, to a valid position to then stop for a short time and simulate a deboarding and boarding process. Using an enhance 2D LiDAR system coincided with an OAK-D Lite for visual confirmation and navigation. Valid parking being designated by a specific sign indicating temporary parking only. 
 <hr>
 
-## Promises --
-* Specific Object detection for allowed parking regions
-* Object / Pedestrian detection using the LiDAR module
-* The previous two objectives would also be achieved while line following and within ROS2
+## Promises
+* Specific Object detection for allowed parking regions.
+* Object / Pedestrian detection using the LiDAR module.
+* Get the LiDAR unit operational into ROS2.
 <hr>
 
-## Accomplishments --
-* Able to identify the signs such that the robot knows its allowed to park there 
-* Completed project within ROS2 and getting the LiDAR functional 
-* 
-* 
-  * 
+## Accomplishments
+* Navigated a complex network within a Linux environment and ROS2 packages. 
+* Implemented a YOLO model to identify and track custom 3D-printed parking signs. 
+* Successfully integrated and configured a LiDAR sensor.
+
+## Future Work
+If we were to redo this project in the future, it would have been necessary to spend more time learning and creating appropriate documentation on how to operate our LiDAR (see below for type). We would also need to learn how to implement it with an emergency stop feature and visually confirm passengers were on board. Visual confirmation being done with another OAK-D Lite camera with appropriate YOLO model. Being able to identify that it is at a stop and allowing the passenger to safely vacate the vehicle and the car understanding this as well. 
 <hr>
 
-## Challenges --
+## Challenges
 * We ran into several component errors and issues leading us to have to delay our progress. As well as outside affairs we couldn't control. 
-* Adapting the various nodes, creating unique publishers/subscribers, and implementing all of our code within ROS2
+* LiDAR took a lot longer to learn and understand how it could be implemented into ROS2 than initially expected.
+* Time was our biggest struggle especially when only having 3 team members, we all had to take on additional roles to get to the stage we eventually got to. 
 <hr>
 
 ## Final Project Videos --
-Clips below show the progress that we made along the way. 
+Media below shows what we were able to complete for our Final project. 
 
 **Final Demo** --
 
