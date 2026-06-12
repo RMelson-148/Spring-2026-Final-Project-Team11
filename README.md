@@ -56,26 +56,26 @@ Our goal for the Final Project was to make a DonkeyCar Taxi, that would bring a 
 <hr>
 
 ## What We Promised --
-* Obstacle avoidance where if the obstacle is not a person the robot swerves around and continues on its path using LIDAR
-* If a pedestrian is detected the robot will stop until the person is no longer detected using the OakD Lite Camera
+* Specific Object detection for allowed parking regions
+* Object / Pedestrian detection using the LiDAR module
 * The previous two objectives would also be achieved while line following and within ROS2
 <hr>
 
 ## Accomplishments --
-* Achieved all of our promised goals successfully 
-* Completed project within ROS2
-* Refined obstacle avoidance algorithm
-* Extremely accurate person detection (almost too good)
-  * Works on real humans and print out images
+* Able to identify the signs such that the robot knows its allowed to park there 
+* Completed project within ROS2 and getting the LiDAR functional 
+* 
+* 
+  * 
 <hr>
 
 ## Challenges --
-* Combining our obstacle avoidance program on the track with the pedestrian detection proved to be more complicated than initially expected
+* We ran into several component errors and issues leading us to have to delay our progress. As well as outside affairs we couldn't control. 
 * Adapting the various nodes, creating unique publishers/subscribers, and implementing all of our code within ROS2
 <hr>
 
 ## Final Project Videos --
-Click any of the clips below to reroute to the video. 
+Clips below show the progress that we made along the way. 
 
 **Final Demo** --
 
@@ -134,19 +134,19 @@ We used the DepthAI package to implement pedestrian detection within ROS2. We to
 
 ## Hardware --
 
-* __3D Printing:__ Camera Mount, Jetson Nano Case
+* __3D Printing:__ All board mounts, Raspberry Pi Mount, Camera Mount and containment.
 * __Laser Cutting:__ Base plate to mount electronics and other components.
 
 __Parts List__
 
 * Traxxas Chassis with steering servo and sensored brushless DC motor
-* Jetson Nano
+* Raspberry Pi
 * WiFi adapter
 * 64 GB Micro SD Card
 * Adapter/reader for Micro SD Card
 * Logitech F710 controller
 * OAK-D Lite Camera
-* LD06 Lidar
+* SICK TiM 2D LiDAR
 * VESC
 * Anti-spark switch with power switch
 * DC-DC Converter
@@ -157,10 +157,8 @@ __Parts List__
 
 *Additional Parts used for testing/debugging*
 
-* Car stand
-* USB-C to USB-A cable
+* USB-C to USB-A cable as well as USB-C to USB-C
 * Micro USB to USB cable
-* 5V, 4A power supply for Jetson Nano
 
 __Baseplate__
 
@@ -248,7 +246,9 @@ Special thanks to Professor Jack Silberman and TAs (Kishore Nukala & Moises Lope
 
 ## Contacts --
 
-* Shasta Subramanian - s1subram@ucsd.edu | shasta.subramanian@gmail.com | [LinkedIn](https://www.linkedin.com/in/shasta-subramanian/)
-* Armond Greenberg - argreenb@ucsd.edu | [LinkedIn](https://www.linkedin.com/in/armond-greenberg-30996420a/)
-* Zixu Hao - 
-* Jacob Chandler - 
+* Alan Ye (a8ye@ucsd.edu)- ECE [LinkedIn](https://www.linkedin.com/in/alan-ye-683ab6346/)
+
+* Wen Qiang - CS
+
+* Ryan Melson (rmelson@uscd.edu)- MAE [LinkedIn](https://www.linkedin.com/in/ryan-melson-97ab44213/?skipRedirect=true)
+
