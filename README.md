@@ -76,73 +76,58 @@ If we were to redo this project in the future, it would have been necessary to s
 * Time was our biggest struggle especially when only having 3 team members, we all had to take on additional roles to get to the stage we eventually got to. 
 <hr>
 
-## Final Project Demo Videos --
-Media below shows what we were able to complete for our Final project. 
+<h2 align="center">Final Project Demo Videos</h2>
+<p align="center">Media below shows what we were able to complete for our Final project.</p>
 
-**Sign Detection Demo** -- 
-[![Sign Detection Demo](https://img.youtube.com/vi/6DFxrUN5yMU/0.jpg)](https://www.youtube.com/watch?v=6DFxrUN5yMU)
+<br />
 
-**Web UI simulation** -- 
-[![Web UI simulation](https://youtube.com)](https://www.youtube.com/shorts/nQIj7ubcuTM)
+<div align="center">
+  <!-- VIDEO 1: SIGN DETECTION -->
+  <h3>**Sign Detection Demo**</h3>
+  <a href="https://www.youtube.com/watch?v=6DFxrUN5yMU" target="_blank">
+    <img src="https://img.youtube.com/vi/6DFxrUN5yMU/0.jpg" alt="Sign Detection Demo" width="560" style="border-radius: 8px;" />
+  </a>
 
-**Outside view of robocar driving around compound** -- 
-[![Outside view of robocar driving around compound](https://img.youtube.com/vi/ZWnJwExIKY0/0.jpg)](https://www.youtube.com/watch?v=ZWnJwExIKY0)
+  <br /><br /><br />
 
+  <!-- VIDEO 2: WEB UI SIMULATION (SHORTS FORMAT) -->
+  <h3>**Web UI simulation**</h3>
+  <a href="https://www.youtube.com/shorts/nQIj7ubcuTM" target="_blank">
+    <img src="https://img.youtube.com/vi/nQIj7ubcuTM/0.jpg" alt="Web UI simulation" width="320" style="border-radius: 8px; object-fit: cover;" />
+  </a>
 
-**Final Demo** --
+  <br /><br /><br />
 
-[<img src="images\finalDemo.PNG" width="600">](https://drive.google.com/file/d/1g-VeBIl5gdUQflPbHFEFg3UOX2X36orz/view?usp=drive_link)
+  <!-- VIDEO 3: ROBOCAR DRIVING -->
+  <h3>**Outside view of robocar driving around compound**</h3>
+  <a href="https://www.youtube.com/watch?v=ZWnJwExIKY0" target="_blank">
+    <img src="https://img.youtube.com/vi/ZWnJwExIKY0/0.jpg" alt="Outside view of robocar driving around compound" width="560" style="border-radius: 8px;" />
+  </a>
+</div>
 
-
-**Final Clips** -- 
-
-Everything Together (3rd Person)
-
-[<img src="images\everything.PNG" width="300">](https://drive.google.com/file/d/1p2i5tRBihoJaQEioC826KT2X-poMZBU0/view?usp=drive_link)
-
-Everything Together (POV) --
-
-[<img src="images\pov.PNG" width="300">](https://drive.google.com/file/d/1Jt7cPzaUdMSlrA__SZ71dYU6QvQGNySb/view?usp=drive_link)
-
-Obstacle Avoidance --
-
-[<img src="images\earlyAvoid.PNG" width="300">](https://drive.google.com/file/d/1Pd8OklPu9tDEfgzJNNkNkR_zGN-SYbMb/view?usp=drive_link)
-
-Pedestrian Detection --
-
-[<img src="images\personDetected.PNG" width="300">](https://drive.google.com/file/d/11qNUHqOkSNa8mivNA_k-UFk8U7LfdoAp/view?usp=drive_link)
-
-**Early Progress Clips** --
-
-Early Obstacle Avoidance --
-
-[<img src="images\earlierAvoid.PNG" width="300">](https://drive.google.com/file/d/14KP8B8-IEhhGi5ObEtc7LC3ndSPOTO66/view?usp=drive_link)
-
-Early Pedestrian Detection --
-
-[<img src="images\earlyPed.PNG" width="300">](https://drive.google.com/file/d/1O3riZQaE1dmO9sFID_FuAqzC17s5VZ9x/view?usp=drive_link)
 
 <hr>
 
 ## Software --
 
-### Overall Architecture --
-Our project was completed entirely with ROS2 navigation in python. The 'rclpy' package is being used to control the robot and our primary control logic consists of the Calibration, Person Detection, Lane Detection, Lane Guidance, and nodes.
+### Overall Architecture
+Our project bridges a high-level web dispatch system with low-level ROS2 navigation. The central logic is split between a Python Flask server (handling the state machine and UI), an OAK-D vision script (handling spatial AI and passenger telemetry), and the ROS2 `rclpy` packages controlling the physical actuators.
 
-- The **Calibration Node** was adapted from Spring 2022 Team 1 and updated for our use case. We strictly needed the gold mask to follow the yellow lines and implemented our own lane following code.
-  
-- The **Person Detection Topic** was fully created for our team's project implementation. The topic is created in our oakd_node.py inside the ucsd_robocar_sensor2_pkg. The oakd_node publishes two topics the first being a color image feed from the camera and the second being an integer value of 1s or 0s for whether it sees a person or not, respectively, using the depth AI's neural network. In order to get the oakd_node running with the rest of the car during navigation a switch must be created in the car_config.yaml file to launch the oakd_launch.launch.py file created in the ucsd_robocar_sensor2_pkg and the previous oakd node must be switched off. The person detection topic is subscribed to in the Lane Guidance Node which ultimately controls the vehicle, while the camera feed is subscribed to in the lane detection node which finds the yellow lines to follow. 
+### Passenger UI & State Machine
+The dispatch dashboard was built using HTML/CSS/JS and a Python Flask backend. 
+- **The State Machine:** We utilized Python's `threading` library to run a continuous background physics/logic loop (`update_vehicle_physics`). This thread manages the active route, continuously calculating progress and transitioning between states (`Idle`, `Arrived at Pickup`, `In Transit`, `Waiting for Disembark`, and `Emergency Stop`).
+- **Telemetry & Video Streaming:** The dashboard polls the Flask API for JSON state updates to move the digital car along a circular CSS map. Simultaneously, it embeds a live MJPEG byte stream (`multipart/x-mixed-replace`) generated by the camera script, providing the passenger with a real-time, low-latency cabin view.
 
-- The **Lane Detection Node** is used to control the robot within the track. We adapt the PID function to calculate the error and set new values to determine the optimal motion of the car to continue following the yellow lines in the lane. This is done by taking the raw camera image, using callibrated color values to detect yellow, and ultimately using the processed image to publish the control values that are subscribed by the lane guidance node.
+### OAK-D Spatial Vision & YOLOv8
+We utilized the DepthAI pipeline to implement real-time passenger verification and station detection.
+- **Custom YOLOv8 Training:** We trained custom models to recognize our 3D-printed passenger duck and a custom parking sign, compiling them to run directly on the OAK-D's VPU.
+- **Sensor Fusion:** By overlaying the 2D YOLO bounding boxes onto the OAK-D's stereo depth map (`YoloSpatialDetectionNetwork`), we could extract the Z-axis distance in millimeters. Once the sign's distance falls below a 0.5m threshold, the state machine registers a station arrival.
+- **Safety Interlocks:** The camera script constantly verifies passenger presence. If the passenger is removed from the seat during transit, a hardware debouncing counter (preventing false-positives from blurs/shadows) trips, sending an API request to the central server that instantly forces the vehicle into an `Emergency Stop`.
 
-- Ultimately, the "magic" happens within the **Lane Guidance Node** which is responsible for directly controlling car's movement. We have adapted the Lidar subscription from Spring 2022 Team 1 to detect obstacles within a particular viewing range in front of our car. The lane guidance node subscribes to lane detection node and our Person Detection nodes to correctly traverse the path. If no obstacles are detected, the car will simply continue its line following program, sticking to the yellow lines in the middle of the lane. If an obstacle is detected by the lidar, the car will correspondingly make a turn based on the object's angle and distance. As it routes around the object, the car continues to check for obstacles to avoid any collision and come back to the path. Additionally, if the subscription to the person_detected node is triggered as active, then the car knows there is a pedestrian in view and will stop.
-
-### Obstacle Avoidance --
+### Obstacle Avoidance & mapping --
 We used the LD06 Lidar to implement obstacle avoidance within ROS2. The program logic is quite simple in that we are constantly scanning the 60 degrees in front of the robot. If an object is detected within our distance threshold, the robot will accordingly make a turn to avoid it. Our logic for selecting which direction to turn in is quite simple in that if the object is on the left side, we first turn right, and otherwise, we turn left. Both turning directions include a corrective turn to bring the robot back to the centerline of the track and continue lane following.
 
-### Pedestrian Detection --
-We used the DepthAI package to implement pedestrian detection within ROS2. We took advantage of the Tiny YOLO neural network setup found within the examples. We filter through the detections to check strictly for a "person" with adjustable confidence levels. We found that a 60% confidence level worked pretty well for our project's use cases. Surprisingly, we found better results with real humans walking in front of the robot (it would detect their feet and be able to classify them as "person" objects). We were also able to successfully scan various printout images of people with high accuracy and success. The programming logic for pedestrian detection is very simple in that if a "person" has been detected in the image passed through by the camera, the VESC throttles are set to 0, stopping the car, until the person has moved out of the field of view.
-<hr>
+
 
 ## Hardware 
 
