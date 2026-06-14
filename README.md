@@ -79,14 +79,13 @@ If we were to redo this project in the future, it would have been necessary to s
 ## Final Project Demo Videos --
 Media below shows what we were able to complete for our Final project. 
 
-**Sign Detection Demo** --
+**Sign Detection Demo** -- 
 [![Sign Detection Demo](https://img.youtube.com/vi/6DFxrUN5yMU/0.jpg)](https://www.youtube.com/watch?v=6DFxrUN5yMU)
 
-**Web UI simulation** --
-[![Outside view of robocar driving around compound](https://www.youtube.com/shorts/nQIj7ubcuTM)](https://www.youtube.com/shorts/nQIj7ubcuTM)
+**Web UI simulation** -- 
+[![Web UI simulation](https://youtube.com)](https://www.youtube.com/shorts/nQIj7ubcuTM)
 
-
-**Outside view of robocar driving around compound** --
+**Outside view of robocar driving around compound** -- 
 [![Outside view of robocar driving around compound](https://img.youtube.com/vi/ZWnJwExIKY0/0.jpg)](https://www.youtube.com/watch?v=ZWnJwExIKY0)
 
 
