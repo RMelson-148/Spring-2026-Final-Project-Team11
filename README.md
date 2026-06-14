@@ -76,8 +76,21 @@ If we were to redo this project in the future, it would have been necessary to s
 * Time was our biggest struggle especially when only having 3 team members, we all had to take on additional roles to get to the stage we eventually got to. 
 <hr>
 
-## Final Project Videos --
+## Final Project Demo Videos --
 Media below shows what we were able to complete for our Final project. 
+
+**Sign Detection Demo** --
+[![Sign Detection Demo](https://img.youtube.com/vi/6DFxrUN5yMU/0.jpg)](https://www.youtube.com/watch?v=6DFxrUN5yMU)
+
+**Web UI simulation** --
+<a href="[https://youtube.com](https://www.youtube.com/shorts/nQIj7ubcuTM)" target="_blank">
+   <img src="[https://youtube.com](https://www.youtube.com/shorts/nQIj7ubcuTM)" alt="Web UI simulation" width="300" />
+</a>
+
+
+**Outside view of robocar driving around compound** --
+[![Outside view of robocar driving around compound](https://img.youtube.com/vi/ZWnJwExIKY0/0.jpg)](https://www.youtube.com/watch?v=ZWnJwExIKY0)
+
 
 **Final Demo** --
 
