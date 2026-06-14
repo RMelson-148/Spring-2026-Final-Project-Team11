@@ -52,7 +52,7 @@ Ryan Melson - MAE [LinkedIn](https://www.linkedin.com/in/ryan-melson-97ab44213/?
 <hr>
 
 ## Abstract
-Our goal for the Final Project was to make a DonkeyCar Taxi, that would bring a passenger, in our case a 3D printed duck, to a valid position to then stop for a short time and simulate a deboarding and boarding process. Using an enhance 2D LiDAR system coincided with an OAK-D Lite for visual confirmation and navigation. Valid parking being designated by a specific sign indicating temporary parking only. 
+Our goal for the Final Project was to make a Taxi, that would bring a passenger, in our case a 3D printed duck, to a valid position to then stop for a short time and simulate a deboarding and boarding process. Using an enhance 2D LiDAR system coincided with an OAK-D Lite for visual confirmation and navigation. Valid parking being designated by a specific sign indicating temporary parking only. 
 <hr>
 
 ## Promises
