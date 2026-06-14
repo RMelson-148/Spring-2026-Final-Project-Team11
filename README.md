@@ -83,9 +83,7 @@ Media below shows what we were able to complete for our Final project.
 [![Sign Detection Demo](https://img.youtube.com/vi/6DFxrUN5yMU/0.jpg)](https://www.youtube.com/watch?v=6DFxrUN5yMU)
 
 **Web UI simulation** --
-<a href="[https://youtube.com](https://www.youtube.com/shorts/nQIj7ubcuTM)" target="_blank">
-   <img src="[https://youtube.com](https://www.youtube.com/shorts/nQIj7ubcuTM)" alt="Web UI simulation" width="300" />
-</a>
+[![Outside view of robocar driving around compound](https://www.youtube.com/shorts/nQIj7ubcuTM)](https://www.youtube.com/shorts/nQIj7ubcuTM)
 
 
 **Outside view of robocar driving around compound** --
