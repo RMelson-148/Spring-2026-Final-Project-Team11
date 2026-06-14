@@ -152,7 +152,10 @@ We utilized the DepthAI pipeline to implement real-time passenger verification a
 ### Obstacle Avoidance & mapping --
 We used the LD06 Lidar to implement obstacle avoidance within ROS2. The program logic is quite simple in that we are constantly scanning the 60 degrees in front of the robot. If an object is detected within our distance threshold, the robot will accordingly make a turn to avoid it. Our logic for selecting which direction to turn in is quite simple in that if the object is on the left side, we first turn right, and otherwise, we turn left. Both turning directions include a corrective turn to bring the robot back to the centerline of the track and continue lane following.
 
-docker pull wuweowo/robocar:latest
+```bash
+      docker pull wuweowo/robocar:latest
+
+```
 
 
 
